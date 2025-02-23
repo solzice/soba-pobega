@@ -10,6 +10,7 @@
             text-align: center;
             margin-top: 50px;
             background-color: #f4f4f4;
+            transition: background-color 0.3s ease-in-out;
         }
         input, button {
             padding: 10px;
@@ -74,10 +75,10 @@
         };
 
         const hintIntervals = {
-            game1: [10, 900, 1500], // Namigi pri 5, 15 in 25 minutah
-            game2: [15, 1200, 1800], // Namigi pri 10, 20 in 30 minutah
-            game3: [20, 1350, 2250], // Namigi pri 7.5, 22.5 in 37.5 minutah
-            game4: [25, 1800, 2700]  // Namigi pri 15, 30 in 45 minutah
+            game1: [10, 900, 1500],
+            game2: [15, 1200, 1800],
+            game3: [20, 1350, 2250],
+            game4: [25, 1800, 2700]
         };
 
         let foundAnswers = [];
@@ -85,11 +86,7 @@
         let timeInSeconds = 60 * 60;
         let timerInterval;
         const timerElement = document.getElementById("timer");
-        //const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/3005/3005-preview.mp3");
-        //https://assets.mixkit.co/active_storage/sfx/3003/3003-preview.mp3
-        //https://assets.mixkit.co/active_storage/sfx/3002/3002-preview.mp3
-        //https://assets.mixkit.co/active_storage/sfx/3001/3001-preview.mp3
-        //https://opengameart.org/sites/default/files/bell.mp3
+        const bodyElement = document.body;
         const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/3002/3002-preview.mp3");
 
         function resetTimer() {
@@ -105,21 +102,31 @@
             document.getElementById("message").textContent = "";
             document.getElementById("answerInput").value = "";
             resetTimer();
-            resetHintTimers();
         }
 
         document.querySelectorAll('input[name="game"]').forEach(radio => {
             radio.addEventListener("change", updateGame);
         });
 
-        function resetHintTimers() {
-        timeInSeconds = 60 * 60;
-        }        
-        
         function playHintSound() {
             audio.play();
-            //alert("Pogledajte namig!");
-            
+            flashBackground();
+        }
+
+        function flashBackground() {
+            let flashCount = 0;
+            const originalColor = "#f4f4f4";
+            const flashColor = "red";
+
+            const flashInterval = setInterval(() => {
+                bodyElement.style.backgroundColor = flashCount % 2 === 0 ? flashColor : originalColor;
+                flashCount++;
+
+                if (flashCount >= 16) { // Utripanje za 8 sekund (menjava na vsake 0.5 sekunde)
+                    clearInterval(flashInterval);
+                    bodyElement.style.backgroundColor = originalColor;
+                }
+            }, 500);
         }
 
         function updateTimer() {
@@ -129,14 +136,12 @@
 
             if (timeInSeconds > 0) {
                 timeInSeconds--;
-                
-                // Predvajaj zvok ob določenih intervalih za trenutno igro
+
                 if (hintIntervals[currentGame].includes(3600 - timeInSeconds)) {
                     playHintSound();
                     const messageElement = document.getElementById("message");
                     messageElement.textContent = "Uporabi namig!";
-                    
-                    // Po 20 sekundah izbriši besedilo
+
                     setTimeout(() => {
                         messageElement.textContent = "";
                     }, 10000);
