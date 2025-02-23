@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="sl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Escape Room Uganke&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input, button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#timer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: red;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-options label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="logo" src="https://raw.githubusercontent.com/lordbibi/escape-room-igra/refs/heads/main/TPLG2425-logo.jpg" alt="Escape Room Logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;LOV NA SOLZICE&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="game-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="game" value="game1" checked&gt; Igra 1</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="game" value="game2"&gt; Igra 2</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="game" value="game3"&gt; Igra 3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="game" value="game4"&gt; Igra 4</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Vnesite odgovor:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="answerInput" placeholder="Vaš odgovor"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="checkAnswer()"&gt;Preveri&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="message"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="timer"&gt;60:00&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const correctAnswers = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game1: ["odgovor1a", "odgovor2a", "odgovor3a", "odgovor4a", "odgovor5a", "odgovor6a", "odgovor7a"],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game2: ["odgovor1b", "odgovor2b", "odgovor3b", "odgovor4b", "odgovor5b", "odgovor6b", "odgovor7b"],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game3: ["odgovor1c", "odgovor2c", "odgovor3c", "odgovor4c", "odgovor5c", "odgovor6c", "odgovor7c"],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game4: ["odgovor1d", "odgovor2d", "odgovor3d", "odgovor4d", "odgovor5d", "odgovor6d", "odgovor7d"]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const hintIntervals = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game1: [10, 900, 1500], // Namigi pri 5, 15 in 25 minutah</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game2: [15, 1200, 1800], // Namigi pri 10, 20 in 30 minutah</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game3: [20, 1350, 2250], // Namigi pri 7.5, 22.5 in 37.5 minutah</p>
+<p class="p1"><span class="Apple-converted-space">            </span>game4: [25, 1800, 2700]<span class="Apple-converted-space">  </span>// Namigi pri 15, 30 in 45 minutah</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let foundAnswers = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentGame = "game1";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let timeInSeconds = 60 * 60;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let timerInterval;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const timerElement = document.getElementById("timer");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>//const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/3005/3005-preview.mp3");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>//https://assets.mixkit.co/active_storage/sfx/3003/3003-preview.mp3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>//https://assets.mixkit.co/active_storage/sfx/3002/3002-preview.mp3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>//https://assets.mixkit.co/active_storage/sfx/3001/3001-preview.mp3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>//https://opengameart.org/sites/default/files/bell.mp3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/3002/3002-preview.mp3");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetTimer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timeInSeconds = 60 * 60;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timerElement.textContent = "60:00";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timerInterval = setInterval(updateTimer, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentGame = document.querySelector('input[name="game"]:checked').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>foundAnswers = [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("message").textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("answerInput").value = "";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetTimer();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetHintTimers();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[name="game"]').forEach(radio =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>radio.addEventListener("change", updateGame);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetHintTimers() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>timeInSeconds = 60 * 60;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} <span class="Apple-converted-space">       </span></p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function playHintSound() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>audio.play();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>//alert("Pogledajte namig!");</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateTimer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minutes = Math.floor(timeInSeconds / 60);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const seconds = timeInSeconds % 60;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (timeInSeconds &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timeInSeconds--;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Predvajaj zvok ob določenih intervalih za trenutno igro</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (hintIntervals[currentGame].includes(3600 - timeInSeconds)) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>playHintSound();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const messageElement = document.getElementById("message");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>messageElement.textContent = "Uporabi namig!";</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Po 20 sekundah izbriši besedilo</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>messageElement.textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 10000);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timerElement.textContent = "Čas je potekel!";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("Čas je potekel! Poskusite znova.");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>timerInterval = setInterval(updateTimer, 1000);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function checkAnswer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const messageElement = document.getElementById("message");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (foundAnswers.includes(userAnswer)) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>messageElement.textContent = "Ta odgovor je že bil pravilno vnešen.";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (correctAnswers[currentGame].includes(userAnswer)) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>foundAnswers.push(userAnswer);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>messageElement.textContent = "Pravilno! Odgovor je bil zabeležen.";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById("answerInput").value = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (foundAnswers.length === correctAnswers[currentGame].length) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>messageElement.textContent = "Čestitamo! Rešili ste vse uganke!";</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>timerElement.textContent = "Čestitamo! Čas: " + timerElement.textContent;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>messageElement.textContent = "Napačen odgovor, poskusi znova!";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
